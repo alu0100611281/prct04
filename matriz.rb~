@@ -15,15 +15,6 @@ for i in 0...m do
   end
 end
 
-#Inicializar array para la multiplicacion.
-for i in 0...m do
-  p[i] = Array.new
-
-  for j in 0...n do
-    p[i][j] = 0
-
-  end
-end
 
 #SUMA DE MATRIZES.
 for i in 0...m do
