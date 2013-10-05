@@ -1,8 +1,9 @@
 #! /usr/bin/ruby
 
-a = [[1, 3, 2], [1, 0, 0], [1, 2, 2]] 
-b = [[0, 0, 5], [7, 5, 0], [2, 1, 1]] 
+a = [[1, 4, 2], [6, 0, 3], [3, 5, 2]] 
+b = [[0, 6, 4], [8, 6, 2], [7, 9, 1]] 
 c = Array.new
+p = Array.new
 m, n = a.size, a[1].size
 
 for i in 0...m do
@@ -14,6 +15,17 @@ for i in 0...m do
   end
 end
 
+#Inicializar array para la multiplicacion.
+for i in 0...m do
+  p[i] = Array.new
+
+  for j in 0...n do
+    p[i][j] = 0
+
+  end
+end
+
+#SUMA DE MATRIZES.
 for i in 0...m do
   for j in 0...n do
     c[i][j] = a[i][j] + b[i][j]
@@ -33,3 +45,4 @@ b.each do |fila|
   c.each do |fila|
     puts fila.join(" ")
   end
+  
