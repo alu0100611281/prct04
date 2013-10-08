@@ -23,6 +23,7 @@ for i in 0...m do
     end
 end
 
+#mostrar
 puts "\n La Matriz a es = "
 a.each do |fila|
   puts fila.join(" ")
