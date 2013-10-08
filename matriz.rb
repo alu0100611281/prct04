@@ -14,6 +14,14 @@ for i in 0...m do
 
   end
 end
+for i in 0...m do
+  p[i] = Array.new
+
+  for j in 0...n do
+    p[i][j] = 0
+
+  end
+end
 
 
 #SUMA DE MATRIZES.
@@ -23,6 +31,17 @@ for i in 0...m do
     end
 end
 
+
+#multiplicacion de matrices
+
+for i in 0...m do
+  for j in 0...n do
+      for k in 0...m do
+	
+	p[i][j]=p[i][j]+a[i][k]*b[k][j]
+      end 
+  end
+end
 #mostrar
 puts "\n La Matriz a es = "
 a.each do |fila|
@@ -38,3 +57,7 @@ b.each do |fila|
     puts fila.join(" ")
   end
   
+  puts "\n La Multiplicacion de la Matriz a y b es = "
+  p.each do |fila|
+    puts fila.join(" ")
+  end
