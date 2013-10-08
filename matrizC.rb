@@ -1,0 +1,63 @@
+#! /usr/bin/ruby
+
+a = [[1, 4, 2], [6, 0, 3], [3, 5, 2]] 
+b = [[0, 6, 3], [8, 6, 2], [3, 4, 1]] 
+c = Array.new
+p = Array.new
+m, n = a.size, a[1].size
+
+for i in 0...m do
+  c[i] = Array.new
+
+  for j in 0...n do
+    c[i][j] = 0
+
+  end
+end
+for i in 0...m do
+  p[i] = Array.new
+
+  for j in 0...n do
+    p[i][j] = 0
+
+  end
+end
+
+
+#SUMA DE MATRIZES.
+for i in 0...m do
+  for j in 0...n do
+    c[i][j] = a[i][j] + b[i][j]
+    end
+end
+
+
+#multiplicacion de matrices
+
+for i in 0...m do
+  for j in 0...n do
+      for k in 0...m do
+	
+	p[i][j]=p[i][j]+a[i][k]*b[k][j]
+      end 
+  end
+end
+#mostrar
+puts "\n La Matriz a es = "
+a.each do |fila|
+  puts fila.join(" ")
+end
+
+puts "\n La Matriz b es = "
+b.each do |fila|
+  puts fila.join(" ")
+  end
+  puts "\n La Suma de la Matriz a y b es = "
+  c.each do |fila|
+    puts fila.join(" ")
+  end
+  
+  puts "\n La Multiplicacion de la Matriz a y b es = "
+  p.each do |fila|
+    puts fila.join(" ")
+  end
